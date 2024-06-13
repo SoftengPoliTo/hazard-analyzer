@@ -1,0 +1,19 @@
+---
+source: crates/pub-api/src/api.rs
+expression: apis
+---
+structs: []
+enums: []
+traits:
+  - name: PubTrait1
+    file: crates/pub-api/tests/projects/traits/src/lib.rs
+    functions:
+      - pub_provided_function1
+      - pub_required_function1
+  - name: PubTrait2
+    file: crates/pub-api/tests/projects/traits/src/lib.rs
+    functions:
+      - pub_provided_function2
+      - pub_required_function2
+functions: []
+macros: []

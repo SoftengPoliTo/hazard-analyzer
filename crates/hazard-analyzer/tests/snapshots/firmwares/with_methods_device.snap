@@ -1,0 +1,34 @@
+---
+source: tests/tests.rs
+expression: manifest
+---
+- file: "./tests/firmwares/with_methods_device.rs"
+  devices:
+    - name: MethodsDevice
+      position:
+        - 2
+        - 17
+      mandatoryActions:
+        - name: first_action
+          hazards:
+            - PowerOutage
+          mandatoryHazards:
+            - PowerOutage
+        - name: second_action
+          hazards:
+            - FireHazard
+            - SpoiledFood
+          mandatoryHazards:
+            - FireHazard
+            - SpoiledFood
+        - name: third_action
+          hazards: []
+          mandatoryHazards: []
+      missingMandatoryActions: []
+      optionalActions:
+        - name: optional_action
+          hazards: []
+      allowedHazards:
+        - FireHazard
+        - PowerOutage
+        - SpoiledFood

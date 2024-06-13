@@ -1,0 +1,73 @@
+---
+source: crates/pub-api/src/api.rs
+expression: apis
+---
+structs:
+  - name: PubStruct1
+    file: crates/pub-api/tests/projects/structs/src/lib.rs
+    functions:
+      - pub_struct1_function
+    traits:
+      - name: Any
+        functions:
+          - type_id
+      - name: Borrow
+        functions:
+          - borrow
+      - name: BorrowMut
+        functions:
+          - borrow_mut
+      - name: Freeze
+      - name: From
+        functions:
+          - from
+      - name: Into
+        functions:
+          - into
+      - name: RefUnwindSafe
+      - name: Send
+      - name: Sync
+      - name: TryFrom
+        functions:
+          - try_from
+      - name: TryInto
+        functions:
+          - try_into
+      - name: Unpin
+      - name: UnwindSafe
+  - name: PubStruct2
+    file: crates/pub-api/tests/projects/structs/src/lib.rs
+    functions:
+      - pub_struct2_function
+    traits:
+      - name: Any
+        functions:
+          - type_id
+      - name: Borrow
+        functions:
+          - borrow
+      - name: BorrowMut
+        functions:
+          - borrow_mut
+      - name: Freeze
+      - name: From
+        functions:
+          - from
+      - name: Into
+        functions:
+          - into
+      - name: RefUnwindSafe
+      - name: Send
+      - name: Sync
+      - name: TryFrom
+        functions:
+          - try_from
+      - name: TryInto
+        functions:
+          - try_into
+      - name: Unpin
+      - name: UnwindSafe
+enums: []
+traits: []
+functions: []
+macros: []

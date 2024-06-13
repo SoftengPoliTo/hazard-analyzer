@@ -1,0 +1,17 @@
+---
+source: src/ascot_device/mod.rs
+expression: new_device
+---
+name: Light
+mandatory_actions:
+  New:
+    0:
+      name: turn_light_on
+      hazards:
+        - FireHazard
+    1:
+      name: turn_light_off
+      hazards: []
+allowed_hazards:
+  - ElectricEnergyConsumption
+  - FireHazard

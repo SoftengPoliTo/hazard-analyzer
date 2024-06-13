@@ -1,0 +1,64 @@
+---
+source: tests/tests.rs
+expression: manifest
+---
+- file: "./tests/firmwares/without_mandatory_hazards.rs"
+  devices:
+    - name: MethodsDevice
+      position:
+        - 15
+        - 17
+      mandatoryActions:
+        - name: first_action
+          hazards: []
+          mandatoryHazards:
+            - PowerOutage
+          missingHazards:
+            - PowerOutage
+        - name: second_action
+          hazards: []
+          mandatoryHazards:
+            - FireHazard
+            - SpoiledFood
+          missingHazards:
+            - FireHazard
+            - SpoiledFood
+        - name: third_action
+          hazards: []
+          mandatoryHazards: []
+      missingMandatoryActions: []
+      optionalActions:
+        - name: optional_action
+          hazards: []
+      allowedHazards:
+        - FireHazard
+        - PowerOutage
+        - SpoiledFood
+    - name: NewDevice
+      position:
+        - 2
+        - 17
+      mandatoryActions:
+        - name: first_action
+          hazards: []
+          mandatoryHazards:
+            - FireHazard
+          missingHazards:
+            - FireHazard
+        - name: second_action
+          hazards: []
+          mandatoryHazards:
+            - ElectricEnergyConsumption
+            - FireHazard
+          missingHazards:
+            - ElectricEnergyConsumption
+            - FireHazard
+        - name: third_action
+          hazards: []
+          mandatoryHazards: []
+      optionalActions:
+        - name: optional_action
+          hazards: []
+      allowedHazards:
+        - ElectricEnergyConsumption
+        - FireHazard

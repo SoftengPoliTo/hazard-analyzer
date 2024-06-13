@@ -1,0 +1,17 @@
+---
+source: src/ascot_device/mod.rs
+expression: new_device
+---
+name: Fridge
+mandatory_actions:
+  Methods:
+    - name: decrease_temperature
+      hazards:
+        - ElectricEnergyConsumption
+    - name: increase_temperature
+      hazards:
+        - ElectricEnergyConsumption
+        - SpoiledFood
+allowed_hazards:
+  - ElectricEnergyConsumption
+  - SpoiledFood

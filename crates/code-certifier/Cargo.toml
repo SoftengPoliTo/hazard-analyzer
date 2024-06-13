@@ -1,0 +1,17 @@
+[package]
+name = "code-certifier"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossbeam = "^0.8.4"
+serde = { version = "^1.0", features = ["derive"] }
+serde_json = { version = "^1.0", features = ["preserve_order"] }
+git2 = "^0.18.3"
+toml = "^0.8.14"
+rustdoc-json = "^0.9.1"
+
+[package.metadata.ascot-firmware]
+url = "https://github.com/SoftengPoliTo/ascot-firmware.git"

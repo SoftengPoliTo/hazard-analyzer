@@ -1,0 +1,20 @@
+---
+source: src/ascot_device/mod.rs
+expression: methods_device
+---
+name: MethodsDevice
+mandatory_actions:
+  Methods:
+    - name: first_action
+      hazards:
+        - PowerOutage
+    - name: second_action
+      hazards:
+        - FireHazard
+        - SpoiledFood
+    - name: third_action
+      hazards: []
+allowed_hazards:
+  - FireHazard
+  - PowerOutage
+  - SpoiledFood

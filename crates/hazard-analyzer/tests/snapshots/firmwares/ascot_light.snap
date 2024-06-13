@@ -1,0 +1,27 @@
+---
+source: tests/tests.rs
+expression: manifest
+---
+- file: "./tests/firmwares/ascot_light.rs"
+  devices:
+    - name: Light
+      position:
+        - 127
+        - 17
+      mandatoryActions:
+        - name: turn_light_off
+          hazards: []
+          mandatoryHazards: []
+        - name: turn_light_on
+          hazards:
+            - FireHazard
+          mandatoryHazards:
+            - FireHazard
+      optionalActions:
+        - name: toggle
+          hazards: []
+        - name: turn_light_on_post
+          hazards: []
+      allowedHazards:
+        - ElectricEnergyConsumption
+        - FireHazard

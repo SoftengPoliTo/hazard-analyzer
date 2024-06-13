@@ -1,0 +1,57 @@
+---
+source: crates/pub-api/src/api.rs
+expression: apis
+---
+structs:
+  - name: Struct
+    file: crates/pub-api/tests/projects/impl_traits/src/lib.rs
+    traits:
+      - name: Any
+        functions:
+          - type_id
+      - name: Borrow
+        functions:
+          - borrow
+      - name: BorrowMut
+        functions:
+          - borrow_mut
+      - name: Freeze
+      - name: From
+        functions:
+          - from
+      - name: Into
+        functions:
+          - into
+      - name: RefUnwindSafe
+      - name: Send
+      - name: Sync
+      - name: Trait1
+        functions:
+          - provided_function1
+          - required_function1
+      - name: Trait2
+        functions:
+          - provided_function2
+          - required_function2
+      - name: TryFrom
+        functions:
+          - try_from
+      - name: TryInto
+        functions:
+          - try_into
+      - name: Unpin
+      - name: UnwindSafe
+enums: []
+traits:
+  - name: Trait1
+    file: crates/pub-api/tests/projects/impl_traits/src/lib.rs
+    functions:
+      - provided_function1
+      - required_function1
+  - name: Trait2
+    file: crates/pub-api/tests/projects/impl_traits/src/lib.rs
+    functions:
+      - provided_function2
+      - required_function2
+functions: []
+macros: []

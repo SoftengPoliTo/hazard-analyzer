@@ -1,0 +1,13 @@
+---
+source: crates/pub-api/src/api.rs
+expression: apis
+---
+structs: []
+enums: []
+traits: []
+functions:
+  - name: pub_function1
+    file: crates/pub-api/tests/projects/functions/src/lib.rs
+  - name: pub_function2
+    file: crates/pub-api/tests/projects/functions/src/lib.rs
+macros: []

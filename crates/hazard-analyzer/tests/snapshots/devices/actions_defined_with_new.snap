@@ -1,0 +1,22 @@
+---
+source: src/ascot_device/mod.rs
+expression: new_device
+---
+name: NewDevice
+mandatory_actions:
+  New:
+    0:
+      name: first_action
+      hazards:
+        - FireHazard
+    1:
+      name: second_action
+      hazards:
+        - ElectricEnergyConsumption
+        - FireHazard
+    2:
+      name: third_action
+      hazards: []
+allowed_hazards:
+  - ElectricEnergyConsumption
+  - FireHazard

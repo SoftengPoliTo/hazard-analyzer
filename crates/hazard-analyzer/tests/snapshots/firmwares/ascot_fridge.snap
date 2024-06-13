@@ -1,0 +1,27 @@
+---
+source: tests/tests.rs
+expression: manifest
+---
+- file: "./tests/firmwares/ascot_fridge.rs"
+  devices:
+    - name: Fridge
+      position:
+        - 95
+        - 17
+      mandatoryActions:
+        - name: decrease_temperature
+          hazards:
+            - ElectricEnergyConsumption
+          mandatoryHazards:
+            - ElectricEnergyConsumption
+        - name: increase_temperature
+          hazards:
+            - ElectricEnergyConsumption
+            - SpoiledFood
+          mandatoryHazards:
+            - ElectricEnergyConsumption
+            - SpoiledFood
+      missingMandatoryActions: []
+      allowedHazards:
+        - ElectricEnergyConsumption
+        - SpoiledFood
